@@ -6,7 +6,6 @@ public class Temperatures {
         double[] temperatures = new double[5];
         double sum = 0;
 
-        // Input temperatures
         System.out.println("Enter 5 temperatures:");
         for (int i = 0; i < temperatures.length; i++) {
             System.out.print("Temperature " + (i + 1) + ": ");
