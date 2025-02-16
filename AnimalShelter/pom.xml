@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- This is the required POM model version for Maven -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group ID, Artifact ID, and Version are the "coordinates" of your project -->
+    <groupId>com.yourdomain</groupId>
+    <artifactId>AnimalShelter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Optional: specify the minimum Java version your project targets -->
+    <properties>
+        <!-- Adjust to whatever version you're using: 8, 11, 17, etc. -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!-- Declare dependencies here if you need external libraries -->
+    <dependencies>
+        <!-- Example dependency (JUnit for testing):
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.1</version>
+            <scope>test</scope>
+        </dependency>
+        -->
+    </dependencies>
+
+    <!-- Configure Maven plugins (such as maven-compiler-plugin) -->
+    <build>
+        <plugins>
+            <!-- The compiler plugin ensures Maven uses the right Java version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <!-- These will match the properties defined above -->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
